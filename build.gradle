@@ -17,6 +17,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	/* kafka */
 	implementation 'org.springframework.kafka:spring-kafka'
+	
+	// a dependency on Jackson Databind
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.9'
+	
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

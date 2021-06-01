@@ -11,11 +11,11 @@ import org.springframework.stereotype.Service;
 import com.jung.util.JsonUtil;
 
 @Service
-public class GenerateAuthNumberConsumer {
+public class ResponseAuthNumberConsumer {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(GenerateAuthNumberConsumer.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ResponseAuthNumberConsumer.class);
 
-    @KafkaListener(topics = "generateAuthNumber", groupId = "generateAuthNumberGroup", concurrency = "4")
+    @KafkaListener(topics = "responseAuthNumber", groupId = "ResponseAuthNumberGroup", concurrency = "4")
     public void consume(String message) throws IOException {
     	Map<String,String> json = JsonUtil.stringToJson(message);
         LOGGER.info("Consumed message : "+json);

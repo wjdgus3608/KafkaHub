@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jung.kafka.service.GenerateAuthNumberProducer;
+import com.jung.kafka.service.ResponseAuthNumberProducer;
 
 
 @RestController
-@RequestMapping(value = "/req-authnumber")
-public class GenerateAuthNumberController {
+@RequestMapping(value = "/res-authnumber")
+public class ResponseAuthNumberController {
 	@Autowired
-	private GenerateAuthNumberProducer producer;
+	private ResponseAuthNumberProducer producer;
 	
 	@PostMapping
     public String sendMessage(@RequestBody Map<String,String> map) {

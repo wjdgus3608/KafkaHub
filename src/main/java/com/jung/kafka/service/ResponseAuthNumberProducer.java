@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 import com.jung.util.JsonUtil;
 
 @Service
-public class GenerateAuthNumberProducer {
-    private static final String TOPIC = "generateAuthNumber";
+public class ResponseAuthNumberProducer {
+    private static final String TOPIC = "ResponseAuthNumber";
     private static final Logger LOGGER = LoggerFactory.getLogger(GenerateAuthNumberConsumer.class);
     
     @Autowired
